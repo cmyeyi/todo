@@ -55,6 +55,7 @@ dependencies {
     implementation(libs.kotlinx.coroutines.android)
     // Hilt
     implementation(libs.hilt.android)
+    implementation(libs.androidx.room.common.jvm)
     testImplementation(libs.hilt.android.testing)
     ksp(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
@@ -63,6 +64,12 @@ dependencies {
     // Lifecycle
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.javapoet)
+
+    // Room
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx) // 协程支持
+
     // 基础测试
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)
